@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My CSV</title>
+    
+</head>
+<body>
+    <div class="cont ">
+        <div class="content ">
+          <div class="conti " id="home">
+            <nav class="set-nab" >
+              <div class="si-logo">
+                <img src="gaming.png" class="my-logo" >
+                <img src="Dash.png" class="menus" onclick="toggle()">
+              </div>
+              
+                <ul class="ul-center reveal" id="menulist">
+                    <li><a href="#home" >Home</a></li>
+                    <li><a href="#about" >About</a></li>
+                    <li><a href="#section3" >Skills</a></li>
+                    <li><a href="#section4" >Contact</a></li>
+                </ul>
+                
+            </nav>
+          </div>
+          
+          <div class="name-pic page-wrapper">
+              <div class="name reveal">
+                <h1>Hi I'm Jethro Verdida</h1>
+                <h2>I am a <span class="type-dev">Web Developer</span></h2>
+                <div class="hire-btn ">
+                  <a href="#section4" class="hire ">Hire Me</a>
+                </div>
+              </div>
+             <div class="pic">
+                <img src="meme.png" class="self reveal">
+             </div>
+             
+          </div>
+         
+          
+        </div>
+        
+        <div class="about " id="about">
+         <p class="me-text reveal">About Me</p>
+         
+          <div class="all-info reveal">
+            <div class="ma-pic">
+              <img src="my pics.jpg" class="self2">
+            </div>
+            <div class="about-cont">
+              <p class="head-name">Hi I'm Jetro Verdida</p>
+              <p class="sub-head-name">I am a Web Developer from Philippines.
+              </p>
+              <p>I love designing websites, mobile apps and branding for clients all over the globe.</p>
+              <p>My key of strengths are visual & interaction design, and also posses coding skills. <br>
+                I gues my title(if you believe in them) would be 'Full Stack Developer'</p>
+                <p>I have been developing a website for a while, but that doesn't matter much now. <br>
+                  I rather say I'll never stop Learning and having Curiosity.</p>
+  
+                  <div class="set-btn1">
+                    <a class="download-btn">Download CV</a>
+                    <a href="#home" class="download-btn">Back to Top</a>
+                  </div>
+            </div>
+          </div>
+        </div>
+        <div id="section3" class="section3 ">
+          <p class="text-skills reveal">Skills</p>
+          <br>
+          <br>
+           <div class="sec3-back reveal">
+             <div class="set1  reveal">
+              <div class="slide ">
+                <img src="html.png" class="htm">
+                <p>I learn HTML about 50% <br>
+                 I'm willing to Learn more.</p>
+              </div>
+              <div class="slide ">
+               <img src="css.png" class="cs">
+               <p>I learn CSS about 50% <br>
+                 I'm willing to Learn more.</p>
+              </div>
+             </div>
+            <div class="set2 reveal">
+              <div class="slide ">
+                <img src="javascript.png" class="jav">
+                <p>I learn Javascript about 30% <br>
+                  I'm willing to Learn more.</p>
+               </div>
+               <div class="slide ">
+                <img src="php.png" class="ph">
+                <p>I learn PHP about 40% <br>
+                  I'm willing to Learn more.</p>
+               </div>
+            </div>
+            
+           </div>
+           <div class="skilled">
+            <a href="#home" class="home-btn1 reveal">Back to Top</a>
+           </div>
+           
+        </div>
+        <div id="section4" class="section4">
+          <p class="cont-text reveal">My Contact</p>
+          <div class="sec4-back reveal">
+            <div class="cont-info ">
+              <p class="get-me">Get in Touch</p>
+              <p class="textses">Name:</p>
+              <p class="texts">Jetro Verdida</p>
+              <p class="textses">Address:</p>
+              <p class="texts">Looc, San Remigio Cebu</p>
+              <p class="textses">Country/ZIP:</p>
+              <p class="texts">Philippines/6011</p>
+              <p class="textses">Email:</p>
+              <p class="texts">jethroverdida8@gmail.com</p>
+              <p class="texts">accelcronos@gmail.com</p>
+            </div>
+            <div class="inp ">
+              <p class="message-me ">Message Me</p>
+              <p class="from ">From:</p><input type="email"  placeholder="Email" required> <br>
+              <input type="email"   placeholder="Subject" required> <br>
+              <p class="to ">To:</p> <input type="text"   placeholder="Email" required> <br>
+        
+              <textarea  placeholder="Message" required></textarea> <br>
+              <div class="btn-send-class">
+                <button class="send-btn">Send</button>
+              </div>
+             
+            </div>
+          </div>
+          <div class="btn-top-class">
+            <a href="#home" class="top-btn ">Back to Top</a>   
+          </div>
+          
+        </div>
+        
+    </div>
+
+    <script type="text/javascript">
+      
+
+      window.addEventListener('scroll', reveal);
+      function reveal(){
+        var reveals = document.querySelectorAll('.reveal');
+        
+        for (var i =0; i < reveals.length; i++){
+        
+          var windowHeight = window.innerHeight;
+          var revealtop = reveals[i].getBoundingClientRect().top;
+          var revealpoint = 150;
+          if(revealtop < windowHeight - revealpoint){
+            reveals[i].classList.add('active');
+          }
+          else{
+            reveals[i].classList.remove('active');
+          }
+        } 
+      }
+
+      
+      
+    </script>
+    
+   <script type="text/javascript">
+     var menulist = document.getElementById("menulist");
+     var btn = document.getElementById("bt");
+     menulist.style.maxHeight = "0px";
+
+     function toggle(){
+       if(menulist.style.maxHeight == "0px")
+       {
+          menulist.style.maxHeight = "200px";
+       }
+       else {
+        menulist.style.maxHeight = "0px";
+       }
+     }
+     menulist.onclick = function(){
+      menulist.style.maxHeight = "0px";
+     }
+     
+   </script>
+</body>
+</html>
